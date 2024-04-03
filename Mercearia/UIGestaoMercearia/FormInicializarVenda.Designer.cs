@@ -218,7 +218,7 @@
             textBoxQuantidade.Location = new Point(931, 257);
             textBoxQuantidade.Name = "textBoxQuantidade";
             textBoxQuantidade.Size = new Size(179, 72);
-            textBoxQuantidade.TabIndex = 10;
+            textBoxQuantidade.TabIndex = 1;
             textBoxQuantidade.Text = "1";
             textBoxQuantidade.TextAlign = HorizontalAlignment.Right;
             textBoxQuantidade.TextChanged += textBoxQuantidade_TextChanged;
@@ -231,7 +231,7 @@
             textBoxCodigodeBarras.Location = new Point(445, 244);
             textBoxCodigodeBarras.Name = "textBoxCodigodeBarras";
             textBoxCodigodeBarras.Size = new Size(289, 79);
-            textBoxCodigodeBarras.TabIndex = 11;
+            textBoxCodigodeBarras.TabIndex = 0;
             textBoxCodigodeBarras.KeyDown += textBoxCodigodeBarras_KeyDown;
             textBoxCodigodeBarras.KeyPress += textBoxCodigodeBarras_KeyPress;
             // 
@@ -275,7 +275,7 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
             dataGridView1.Size = new Size(665, 330);
-            dataGridView1.TabIndex = 11;
+            dataGridView1.TabIndex = 2;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             dataGridView1.Click += dataGridView1_Click;
             // 

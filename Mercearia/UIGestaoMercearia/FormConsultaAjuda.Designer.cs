@@ -305,9 +305,9 @@
             label7.ForeColor = Color.White;
             label7.Location = new Point(20, 123);
             label7.Name = "label7";
-            label7.Size = new Size(197, 28);
+            label7.Size = new Size(189, 28);
             label7.TabIndex = 18;
-            label7.Text = "F12 - Finalizar Venda";
+            label7.Text = "F9 - Finalizar Venda";
             // 
             // label15
             // 

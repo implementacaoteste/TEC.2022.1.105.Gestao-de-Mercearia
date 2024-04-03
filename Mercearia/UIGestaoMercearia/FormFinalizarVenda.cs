@@ -149,5 +149,10 @@ namespace UIGestaoMercearia
                 frm.ShowDialog();
             }
         }
+
+        private void FormFinalizarVenda_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
