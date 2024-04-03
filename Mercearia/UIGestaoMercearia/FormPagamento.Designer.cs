@@ -66,7 +66,7 @@
             label2.Location = new Point(154, 108);
             label2.Name = "label2";
             label2.Size = new Size(176, 18);
-            label2.TabIndex = 2;
+            label2.TabIndex = 3;
             label2.Text = "INSIRA A INFORMAÇÃO:";
             // 
             // label1
@@ -77,7 +77,7 @@
             label1.Location = new Point(12, 109);
             label1.Name = "label1";
             label1.Size = new Size(111, 18);
-            label1.TabIndex = 0;
+            label1.TabIndex = 1;
             label1.Text = "BUSCAR POR:";
             // 
             // buttonBuscar
@@ -87,7 +87,7 @@
             buttonBuscar.Location = new Point(469, 127);
             buttonBuscar.Name = "buttonBuscar";
             buttonBuscar.Size = new Size(94, 29);
-            buttonBuscar.TabIndex = 4;
+            buttonBuscar.TabIndex = 5;
             buttonBuscar.Text = "&Buscar";
             buttonBuscar.UseVisualStyleBackColor = false;
             buttonBuscar.Click += buttonBuscar_Click;
@@ -99,7 +99,7 @@
             textBoxBuscarPor.Location = new Point(154, 129);
             textBoxBuscarPor.Name = "textBoxBuscarPor";
             textBoxBuscarPor.Size = new Size(309, 27);
-            textBoxBuscarPor.TabIndex = 3;
+            textBoxBuscarPor.TabIndex = 4;
             textBoxBuscarPor.KeyDown += textBoxBuscarPor_KeyDown;
             // 
             // comboBoxBuscarPor
@@ -109,7 +109,8 @@
             comboBoxBuscarPor.Location = new Point(12, 130);
             comboBoxBuscarPor.Name = "comboBoxBuscarPor";
             comboBoxBuscarPor.Size = new Size(136, 28);
-            comboBoxBuscarPor.TabIndex = 1;
+            comboBoxBuscarPor.TabIndex = 2;
+            comboBoxBuscarPor.Click += comboBoxBuscarPor_Click;
             // 
             // panel2
             // 
@@ -188,8 +189,9 @@
             dataGridViewCategoria.RowHeadersWidth = 51;
             dataGridViewCategoria.RowTemplate.Height = 29;
             dataGridViewCategoria.Size = new Size(553, 294);
-            dataGridViewCategoria.TabIndex = 5;
+            dataGridViewCategoria.TabIndex = 0;
             dataGridViewCategoria.DoubleClick += dataGridViewCategoria_DoubleClick;
+            dataGridViewCategoria.KeyDown += textBoxBuscarPor_KeyDown;
             // 
             // tipoDataGridViewTextBoxColumn
             // 

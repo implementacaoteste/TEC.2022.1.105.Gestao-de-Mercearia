@@ -78,7 +78,7 @@
             panel1.Controls.Add(labelPDV);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1291, 84);
+            panel1.Size = new Size(1198, 84);
             panel1.TabIndex = 2;
             // 
             // buttonAjuda
@@ -103,7 +103,7 @@
             labelPDV.BackColor = Color.FromArgb(50, 153, 204);
             labelPDV.Font = new Font("Britannic Bold", 36F, FontStyle.Regular, GraphicsUnit.Point);
             labelPDV.ForeColor = Color.White;
-            labelPDV.Location = new Point(403, 9);
+            labelPDV.Location = new Point(357, 9);
             labelPDV.Name = "labelPDV";
             labelPDV.Size = new Size(488, 67);
             labelPDV.TabIndex = 1;
@@ -114,7 +114,7 @@
             labelNomeProduto.Anchor = AnchorStyles.Top;
             labelNomeProduto.AutoSize = true;
             labelNomeProduto.Font = new Font("Stencil", 28.2F, FontStyle.Regular, GraphicsUnit.Point);
-            labelNomeProduto.Location = new Point(244, 13);
+            labelNomeProduto.Location = new Point(197, 13);
             labelNomeProduto.Name = "labelNomeProduto";
             labelNomeProduto.Size = new Size(448, 56);
             labelNomeProduto.TabIndex = 0;
@@ -129,7 +129,7 @@
             panel2.Controls.Add(pictureBoxLogo);
             panel2.Location = new Point(399, 82);
             panel2.Name = "panel2";
-            panel2.Size = new Size(892, 92);
+            panel2.Size = new Size(799, 92);
             panel2.TabIndex = 1;
             // 
             // pictureBoxLogo
@@ -142,7 +142,7 @@
             pictureBoxLogo.ErrorImage = null;
             pictureBoxLogo.Image = Properties.Resources.shopping_cart_icon_illustration_free_vector2;
             pictureBoxLogo.InitialImage = null;
-            pictureBoxLogo.Location = new Point(722, -3);
+            pictureBoxLogo.Location = new Point(629, -3);
             pictureBoxLogo.Name = "pictureBoxLogo";
             pictureBoxLogo.Size = new Size(165, 88);
             pictureBoxLogo.SizeMode = PictureBoxSizeMode.Zoom;
@@ -156,9 +156,9 @@
             panel3.BorderStyle = BorderStyle.Fixed3D;
             panel3.Controls.Add(label4);
             panel3.Controls.Add(labelSubtotal);
-            panel3.Location = new Point(399, 836);
+            panel3.Location = new Point(399, 857);
             panel3.Name = "panel3";
-            panel3.Size = new Size(620, 183);
+            panel3.Size = new Size(527, 183);
             panel3.TabIndex = 2;
             // 
             // label4
@@ -166,7 +166,7 @@
             label4.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(303, 49);
+            label4.Location = new Point(210, 49);
             label4.Name = "label4";
             label4.Size = new Size(97, 28);
             label4.TabIndex = 3;
@@ -177,7 +177,7 @@
             labelSubtotal.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             labelSubtotal.AutoSize = true;
             labelSubtotal.Font = new Font("Stencil", 30F, FontStyle.Regular, GraphicsUnit.Point);
-            labelSubtotal.Location = new Point(208, 77);
+            labelSubtotal.Location = new Point(115, 77);
             labelSubtotal.Name = "labelSubtotal";
             labelSubtotal.Size = new Size(187, 59);
             labelSubtotal.TabIndex = 2;
@@ -189,7 +189,7 @@
             buttonFinalizarVenda.BackColor = Color.FromArgb(50, 153, 204);
             buttonFinalizarVenda.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             buttonFinalizarVenda.ForeColor = SystemColors.Window;
-            buttonFinalizarVenda.Location = new Point(1008, 724);
+            buttonFinalizarVenda.Location = new Point(915, 745);
             buttonFinalizarVenda.Name = "buttonFinalizarVenda";
             buttonFinalizarVenda.Size = new Size(208, 66);
             buttonFinalizarVenda.TabIndex = 22;
@@ -202,7 +202,7 @@
             label6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(1053, 193);
+            label6.Location = new Point(960, 193);
             label6.Name = "label6";
             label6.Size = new Size(163, 31);
             label6.TabIndex = 3;
@@ -215,7 +215,7 @@
             textBoxQuantidade.BorderStyle = BorderStyle.None;
             textBoxQuantidade.Cursor = Cursors.IBeam;
             textBoxQuantidade.Font = new Font("Stencil", 36F, FontStyle.Regular, GraphicsUnit.Point);
-            textBoxQuantidade.Location = new Point(1024, 257);
+            textBoxQuantidade.Location = new Point(931, 257);
             textBoxQuantidade.Name = "textBoxQuantidade";
             textBoxQuantidade.Size = new Size(179, 72);
             textBoxQuantidade.TabIndex = 10;
@@ -251,7 +251,7 @@
             buttonCancelar.BackColor = Color.Coral;
             buttonCancelar.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             buttonCancelar.ForeColor = SystemColors.ButtonHighlight;
-            buttonCancelar.Location = new Point(797, 724);
+            buttonCancelar.Location = new Point(704, 745);
             buttonCancelar.Name = "buttonCancelar";
             buttonCancelar.Size = new Size(205, 66);
             buttonCancelar.TabIndex = 9;
@@ -274,7 +274,7 @@
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(758, 309);
+            dataGridView1.Size = new Size(665, 330);
             dataGridView1.TabIndex = 11;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             dataGridView1.Click += dataGridView1_Click;
@@ -338,7 +338,7 @@
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             label12.ImageAlign = ContentAlignment.TopCenter;
-            label12.Location = new Point(773, 194);
+            label12.Location = new Point(727, 194);
             label12.Name = "label12";
             label12.Size = new Size(200, 31);
             label12.TabIndex = 2;
@@ -352,7 +352,7 @@
             labelpreco.FlatStyle = FlatStyle.System;
             labelpreco.Font = new Font("Stencil", 36F, FontStyle.Regular, GraphicsUnit.Point);
             labelpreco.ImageAlign = ContentAlignment.TopCenter;
-            labelpreco.Location = new Point(740, 258);
+            labelpreco.Location = new Point(694, 258);
             labelpreco.Name = "labelpreco";
             labelpreco.Size = new Size(87, 71);
             labelpreco.TabIndex = 0;
@@ -375,9 +375,9 @@
             // 
             panel4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel4.BackColor = Color.White;
-            panel4.Location = new Point(399, 807);
+            panel4.Location = new Point(399, 828);
             panel4.Name = "panel4";
-            panel4.Size = new Size(892, 11);
+            panel4.Size = new Size(799, 11);
             panel4.TabIndex = 4;
             // 
             // subtotal1
@@ -385,7 +385,7 @@
             subtotal1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             subtotal1.AutoSize = true;
             subtotal1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            subtotal1.Location = new Point(458, 683);
+            subtotal1.Location = new Point(458, 704);
             subtotal1.Name = "subtotal1";
             subtotal1.Size = new Size(125, 31);
             subtotal1.TabIndex = 23;
@@ -399,7 +399,7 @@
             Subtotal2.BorderStyle = BorderStyle.None;
             Subtotal2.Cursor = Cursors.IBeam;
             Subtotal2.Font = new Font("Stencil", 36F, FontStyle.Regular, GraphicsUnit.Point);
-            Subtotal2.Location = new Point(458, 718);
+            Subtotal2.Location = new Point(458, 739);
             Subtotal2.Name = "Subtotal2";
             Subtotal2.ReadOnly = true;
             Subtotal2.Size = new Size(333, 72);
@@ -411,7 +411,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
-            ClientSize = new Size(1291, 814);
+            ClientSize = new Size(1198, 835);
             Controls.Add(Subtotal2);
             Controls.Add(subtotal1);
             Controls.Add(panel4);

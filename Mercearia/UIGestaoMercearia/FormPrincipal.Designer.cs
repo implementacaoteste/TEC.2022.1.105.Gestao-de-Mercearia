@@ -61,6 +61,12 @@ namespace UIGestaoMercearia
             pictureBox2 = new PictureBox();
             toolTip1 = new ToolTip(components);
             buttonAjuda = new Button();
+            panel6 = new Panel();
+            label1 = new Label();
+            label8 = new Label();
+            label10 = new Label();
+            label12 = new Label();
+            label30 = new Label();
             MENU = new Label();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -71,6 +77,7 @@ namespace UIGestaoMercearia
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxConfiguração).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            panel6.SuspendLayout();
             SuspendLayout();
             // 
             // MENU
@@ -497,6 +504,85 @@ namespace UIGestaoMercearia
             buttonAjuda.Click += buttonAjuda_Click;
             buttonAjuda.KeyDown += buttonAjuda_KeyDown;
             // 
+            // panel6
+            // 
+            panel6.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel6.BackColor = SystemColors.ControlLight;
+            panel6.Controls.Add(label1);
+            panel6.Controls.Add(label8);
+            panel6.Controls.Add(label10);
+            panel6.Controls.Add(label12);
+            panel6.Controls.Add(label30);
+            panel6.Location = new Point(399, 935);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(1078, 64);
+            panel6.TabIndex = 22;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            label1.AutoSize = true;
+            label1.BackColor = SystemColors.ControlLight;
+            label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.DimGray;
+            label1.Location = new Point(176, 14);
+            label1.Name = "label1";
+            label1.Size = new Size(213, 28);
+            label1.TabIndex = 40;
+            label1.Text = "| F1 - Central de Ajuda";
+            // 
+            // label8
+            // 
+            label8.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            label8.AutoSize = true;
+            label8.BackColor = SystemColors.ControlLight;
+            label8.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.ForeColor = Color.DimGray;
+            label8.Location = new Point(395, 14);
+            label8.Name = "label8";
+            label8.Size = new Size(146, 28);
+            label8.TabIndex = 36;
+            label8.Text = "| Tab - Avançar";
+            // 
+            // label10
+            // 
+            label10.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            label10.AutoSize = true;
+            label10.BackColor = SystemColors.ControlLight;
+            label10.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label10.ForeColor = Color.DimGray;
+            label10.Location = new Point(680, 14);
+            label10.Name = "label10";
+            label10.Size = new Size(190, 28);
+            label10.TabIndex = 37;
+            label10.Text = "| F11 - Configuração";
+            // 
+            // label12
+            // 
+            label12.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            label12.AutoSize = true;
+            label12.BackColor = SystemColors.ControlLight;
+            label12.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label12.ForeColor = Color.DimGray;
+            label12.Location = new Point(876, 14);
+            label12.Name = "label12";
+            label12.Size = new Size(167, 28);
+            label12.TabIndex = 38;
+            label12.Text = "| F12 - Estatística ";
+            // 
+            // label30
+            // 
+            label30.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            label30.AutoSize = true;
+            label30.BackColor = SystemColors.ControlLight;
+            label30.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label30.ForeColor = Color.DimGray;
+            label30.Location = new Point(544, 14);
+            label30.Name = "label30";
+            label30.Size = new Size(131, 28);
+            label30.TabIndex = 39;
+            label30.Text = "| Esc - Fechar";
+            // 
             // FormPrincipal
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -504,6 +590,7 @@ namespace UIGestaoMercearia
             BackColor = Color.White;
             BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(1475, 999);
+            Controls.Add(panel6);
             Controls.Add(pictureBoxLogo);
             Controls.Add(labelNomeEmpresa);
             Controls.Add(panel4);
@@ -539,6 +626,8 @@ namespace UIGestaoMercearia
             panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBoxConfiguração).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -574,6 +663,12 @@ namespace UIGestaoMercearia
         private Label labelPDV;
         private Button buttonAjuda;
         private PictureBox pictureBox3;
+        private Panel panel6;
+        private Label label10;
+        private Label label12;
+        private Label label30;
+        private Label label1;
+        private Label label8;
     }
 }
 
