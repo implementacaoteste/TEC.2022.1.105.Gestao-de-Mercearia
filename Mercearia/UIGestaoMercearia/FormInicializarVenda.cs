@@ -174,26 +174,6 @@ namespace UIGestaoMercearia
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void pictureBoxAjuda_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void subtotal1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void textBoxQuantidade_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonAjuda_KeyDown(object sender, KeyEventArgs e)
         {
             using (FormConsultaAjuda frm = new FormConsultaAjuda())
@@ -204,7 +184,7 @@ namespace UIGestaoMercearia
 
         private void dataGridView1_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

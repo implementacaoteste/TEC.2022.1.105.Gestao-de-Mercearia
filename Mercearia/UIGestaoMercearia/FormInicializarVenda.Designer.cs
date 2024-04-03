@@ -221,7 +221,6 @@
             textBoxQuantidade.TabIndex = 1;
             textBoxQuantidade.Text = "1";
             textBoxQuantidade.TextAlign = HorizontalAlignment.Right;
-            textBoxQuantidade.TextChanged += textBoxQuantidade_TextChanged;
             textBoxQuantidade.KeyDown += textBoxQuantidade_KeyDown;
             // 
             // textBoxCodigodeBarras
@@ -276,7 +275,6 @@
             dataGridView1.RowTemplate.Height = 29;
             dataGridView1.Size = new Size(665, 330);
             dataGridView1.TabIndex = 2;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             dataGridView1.Click += dataGridView1_Click;
             // 
             // NomeProduto
@@ -390,7 +388,6 @@
             subtotal1.Size = new Size(125, 31);
             subtotal1.TabIndex = 23;
             subtotal1.Text = "SUBTOTAL";
-            subtotal1.Click += subtotal1_Click;
             // 
             // Subtotal2
             // 
