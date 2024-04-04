@@ -80,7 +80,12 @@ namespace UIGestaoMercearia
             if (e.KeyCode == Keys.Enter)
                 AdicionarTroco();
             else if (e.KeyCode == Keys.Escape)
-                this.DialogResult = DialogResult.Cancel;
+            {
+                using (FormMenssagem frm = new FormMenssagem())
+                {
+                    frm.ShowDialog();
+                }
+            }
             else if (e.KeyCode == Keys.F11)
                 buttonBuscarFormaPagamento_Click(sender, e);
             else if (e.KeyCode == Keys.F12)
@@ -148,6 +153,17 @@ namespace UIGestaoMercearia
             {
                 frm.ShowDialog();
             }
+        }
+
+        private void buttonSalvarVenda_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Venda Concluida com sucesso!");
+            Close();
+        }
+
+        private void FormFinalizarVenda_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

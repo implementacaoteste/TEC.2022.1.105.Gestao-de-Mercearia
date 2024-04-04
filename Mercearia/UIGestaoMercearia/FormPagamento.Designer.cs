@@ -110,6 +110,7 @@
             comboBoxBuscarPor.Name = "comboBoxBuscarPor";
             comboBoxBuscarPor.Size = new Size(136, 28);
             comboBoxBuscarPor.TabIndex = 1;
+            comboBoxBuscarPor.Click += comboBoxBuscarPor_Click;
             // 
             // panel2
             // 
@@ -132,7 +133,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(583, 83);
-            panel1.TabIndex = 0;
+            panel1.TabIndex = 1;
             // 
             // buttonAjuda
             // 
@@ -188,8 +189,9 @@
             dataGridViewCategoria.RowHeadersWidth = 51;
             dataGridViewCategoria.RowTemplate.Height = 29;
             dataGridViewCategoria.Size = new Size(553, 294);
-            dataGridViewCategoria.TabIndex = 5;
+            dataGridViewCategoria.TabIndex = 0;
             dataGridViewCategoria.DoubleClick += dataGridViewCategoria_DoubleClick;
+            dataGridViewCategoria.KeyDown += textBoxBuscarPor_KeyDown;
             // 
             // bindingSourcePagamento
             // 

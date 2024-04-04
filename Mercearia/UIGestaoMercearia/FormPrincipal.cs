@@ -9,6 +9,7 @@ namespace UIGestaoMercearia
         public FormPrincipal()
         {
             InitializeComponent();
+
         }
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
@@ -94,8 +95,8 @@ namespace UIGestaoMercearia
         private void PosicionarTopo()
         {
             //labelNomeEmpresa.Left = ((this.Width - panel2.Width) / 2) - labelNomeEmpresa.Width / 2 - (panel2.Width / 4);
-            labelNomeEmpresa.Left = panel3.Width / 2 - labelNomeEmpresa.Width / 2;
-            pictureBoxLogo.Left = labelNomeEmpresa.Left - pictureBoxLogo.Width;
+            //labelNomeEmpresa.Left = panel3.Width / 2 - labelNomeEmpresa.Width / 2;
+            //pictureBoxLogo.Left = labelNomeEmpresa.Left - pictureBoxLogo.Width;
         }
         private void buttonProdutos_Click(object sender, EventArgs e)
         {

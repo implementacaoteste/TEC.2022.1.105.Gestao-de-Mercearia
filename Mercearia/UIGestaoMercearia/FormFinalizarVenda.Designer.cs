@@ -46,6 +46,7 @@ namespace UIGestaoMercearia
             labelExTroco = new Label();
             buttonCadastrarCliente = new Button();
             buttonAjuda = new Button();
+            buttonSalvarVenda = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bindingSourceFinalizarVenda).BeginInit();
             SuspendLayout();
@@ -209,9 +210,9 @@ namespace UIGestaoMercearia
             // 
             buttonCadastrarCliente.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             buttonCadastrarCliente.ForeColor = Color.FromArgb(50, 153, 204);
-            buttonCadastrarCliente.Location = new Point(321, 763);
+            buttonCadastrarCliente.Location = new Point(281, 763);
             buttonCadastrarCliente.Name = "buttonCadastrarCliente";
-            buttonCadastrarCliente.Size = new Size(530, 69);
+            buttonCadastrarCliente.Size = new Size(301, 69);
             buttonCadastrarCliente.TabIndex = 4;
             buttonCadastrarCliente.Text = "CADASTRAR CLIENTE";
             buttonCadastrarCliente.UseVisualStyleBackColor = true;
@@ -233,12 +234,25 @@ namespace UIGestaoMercearia
             buttonAjuda.Click += buttonAjuda_Click;
             buttonAjuda.KeyDown += buttonAjuda_KeyDown;
             // 
+            // buttonSalvarVenda
+            // 
+            buttonSalvarVenda.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonSalvarVenda.ForeColor = Color.FromArgb(50, 153, 204);
+            buttonSalvarVenda.Location = new Point(608, 763);
+            buttonSalvarVenda.Name = "buttonSalvarVenda";
+            buttonSalvarVenda.Size = new Size(301, 69);
+            buttonSalvarVenda.TabIndex = 39;
+            buttonSalvarVenda.Text = "SALVAR VENDA";
+            buttonSalvarVenda.UseVisualStyleBackColor = true;
+            buttonSalvarVenda.Click += buttonSalvarVenda_Click;
+            // 
             // FormFinalizarVenda
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(50, 153, 204);
             ClientSize = new Size(1143, 844);
+            Controls.Add(buttonSalvarVenda);
             Controls.Add(buttonAjuda);
             Controls.Add(buttonCadastrarCliente);
             Controls.Add(label3);
@@ -262,6 +276,7 @@ namespace UIGestaoMercearia
             ShowIcon = false;
             ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterScreen;
+            Load += FormFinalizarVenda_Load;
             KeyDown += FormFinalizarVenda_KeyDown;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)bindingSourceFinalizarVenda).EndInit();
@@ -288,5 +303,6 @@ namespace UIGestaoMercearia
         private Button button1;
         private Button buttonCadastrarCliente;
         private Button buttonAjuda;
+        private Button buttonSalvarVenda;
     }
 }

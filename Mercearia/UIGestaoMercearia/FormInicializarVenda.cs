@@ -95,9 +95,9 @@ namespace UIGestaoMercearia
         }
         private void textBoxCodigodeBarras_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.F12)
+            if (e.KeyCode == Keys.F9)
                 buttonFinalizarVenda_Click(sender, e);
-            if (e.KeyCode == Keys.F11)
+            else if (e.KeyCode == Keys.F11)
                 buttonCancelar_Click(sender, e);
             else if (e.KeyCode == Keys.F1)
                 buttonAjuda_KeyDown(sender, e);
@@ -142,12 +142,6 @@ namespace UIGestaoMercearia
         }
         private void buttonFinalizarVenda_Click(object sender, EventArgs e)
         {
-            textBoxCodigodeBarras.Text = "";
-            labelpreco.Text = "";
-            textBoxQuantidade.Text = "1";
-            labelNomeProduto.Text = "NOME DO PRODUTO";
-            labelSubtotal.Text = "00,00";
-
             try
             {
                 FormaPagamento formaPagamento = new FormaPagamento();
@@ -162,7 +156,11 @@ namespace UIGestaoMercearia
                             using (FormFinalizarVenda formFinalizarVenda = new FormFinalizarVenda(formaPagamento, ((Venda)bindingSourceVenda.Current).Total))
                             {
                                 formFinalizarVenda.ShowDialog();
-
+                                textBoxCodigodeBarras.Text = "";
+                                labelpreco.Text = "";
+                                textBoxQuantidade.Text = "1";
+                                labelNomeProduto.Text = "NOME DO PRODUTO";
+                                labelSubtotal.Text = "00,00";
                             }
                         }
                     }
@@ -176,26 +174,6 @@ namespace UIGestaoMercearia
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void pictureBoxAjuda_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void subtotal1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void textBoxQuantidade_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonAjuda_KeyDown(object sender, KeyEventArgs e)
         {
             using (FormConsultaAjuda frm = new FormConsultaAjuda())
@@ -206,7 +184,7 @@ namespace UIGestaoMercearia
 
         private void dataGridView1_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
