@@ -95,7 +95,7 @@ namespace UIGestaoMercearia
         }
         private void textBoxCodigodeBarras_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.F9)
+            if (e.KeyCode == Keys.F12)
                 buttonFinalizarVenda_Click(sender, e);
             else if (e.KeyCode == Keys.F11)
                 buttonCancelar_Click(sender, e);
@@ -142,6 +142,11 @@ namespace UIGestaoMercearia
         }
         private void buttonFinalizarVenda_Click(object sender, EventArgs e)
         {
+            textBoxCodigodeBarras.Text = "";
+            labelpreco.Text = "";
+            textBoxQuantidade.Text = "1";
+            labelNomeProduto.Text = "NOME DO PRODUTO";
+            labelSubtotal.Text = "00,00";
             try
             {
                 FormaPagamento formaPagamento = new FormaPagamento();
@@ -156,11 +161,6 @@ namespace UIGestaoMercearia
                             using (FormFinalizarVenda formFinalizarVenda = new FormFinalizarVenda(formaPagamento, ((Venda)bindingSourceVenda.Current).Total))
                             {
                                 formFinalizarVenda.ShowDialog();
-                                textBoxCodigodeBarras.Text = "";
-                                labelpreco.Text = "";
-                                textBoxQuantidade.Text = "1";
-                                labelNomeProduto.Text = "NOME DO PRODUTO";
-                                labelSubtotal.Text = "00,00";
                             }
                         }
                     }
