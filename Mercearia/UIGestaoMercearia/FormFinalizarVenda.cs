@@ -79,13 +79,6 @@ namespace UIGestaoMercearia
         {
             if (e.KeyCode == Keys.Enter)
                 AdicionarTroco();
-            else if (e.KeyCode == Keys.Escape)
-            {
-                using (FormMenssagem frm = new FormMenssagem())
-                {
-                    frm.ShowDialog();
-                }
-            }
             else if (e.KeyCode == Keys.F11)
                 buttonBuscarFormaPagamento_Click(sender, e);
             else if (e.KeyCode == Keys.F12)
@@ -94,6 +87,8 @@ namespace UIGestaoMercearia
                 buttonAjuda_Click(sender, e);
             else if (e.KeyCode == Keys.F10)
                 button1_Click(sender, e);
+            else if (e.KeyCode == Keys.Escape)
+                Close();
         }
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
