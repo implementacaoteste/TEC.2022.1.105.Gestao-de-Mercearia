@@ -24,7 +24,7 @@ CREATE TABLE [dbo].[Categoria](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Cliente]    Script Date: 22/02/2024 09:14:06 ******/
+/****** Object:  Table [dbo].[Cliente]    Script Date: 15/04/2024 12:11:16 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -43,7 +43,24 @@ CREATE TABLE [dbo].[Cliente](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Estoque]    Script Date: 22/02/2024 09:14:06 ******/
+/****** Object:  Table [dbo].[Compra]    Script Date: 15/04/2024 12:11:16 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Compra](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[DataCompra] [date] NULL,
+	[ValorTotal] [float] NULL,
+	[FornecedorId] [int] NOT NULL,
+	[FormaPagamentoId] [int] NOT NULL,
+ CONSTRAINT [PK_Compra] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Estoque]    Script Date: 15/04/2024 12:11:16 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -62,7 +79,7 @@ CREATE TABLE [dbo].[Estoque](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[FormaPagamento]    Script Date: 22/02/2024 09:14:06 ******/
+/****** Object:  Table [dbo].[FormaPagamento]    Script Date: 15/04/2024 12:11:16 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -78,7 +95,7 @@ CREATE TABLE [dbo].[FormaPagamento](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Fornecedor]    Script Date: 22/02/2024 09:14:06 ******/
+/****** Object:  Table [dbo].[Fornecedor]    Script Date: 15/04/2024 12:11:16 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -96,7 +113,7 @@ CREATE TABLE [dbo].[Fornecedor](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Funcionario]    Script Date: 22/02/2024 09:14:06 ******/
+/****** Object:  Table [dbo].[Funcionario]    Script Date: 15/04/2024 12:11:16 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -114,7 +131,7 @@ CREATE TABLE [dbo].[Funcionario](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[GrupoUsuario]    Script Date: 22/02/2024 09:14:06 ******/
+/****** Object:  Table [dbo].[GrupoUsuario]    Script Date: 15/04/2024 12:11:16 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -128,7 +145,25 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[ItemVenda]    Script Date: 22/02/2024 09:14:06 ******/
+/****** Object:  Table [dbo].[ItemCompra]    Script Date: 15/04/2024 12:11:16 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[ItemCompra](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Quantidade] [int] NOT NULL,
+	[ValorUnitario] [float] NOT NULL,
+	[Subtotal] [float] NOT NULL,
+	[IdCompra] [int] NOT NULL,
+	[IdProduto] [int] NOT NULL,
+ CONSTRAINT [PK_ItemCompra] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[ItemVenda]    Script Date: 15/04/2024 12:11:16 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -147,7 +182,7 @@ CREATE TABLE [dbo].[ItemVenda](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Marca]    Script Date: 22/02/2024 09:14:06 ******/
+/****** Object:  Table [dbo].[Marca]    Script Date: 15/04/2024 12:11:16 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -161,7 +196,7 @@ CREATE TABLE [dbo].[Marca](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Permissao]    Script Date: 22/02/2024 09:14:06 ******/
+/****** Object:  Table [dbo].[Permissao]    Script Date: 15/04/2024 12:11:16 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -175,7 +210,7 @@ CREATE TABLE [dbo].[Permissao](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[PermissaoGrupoUsuario]    Script Date: 22/02/2024 09:14:06 ******/
+/****** Object:  Table [dbo].[PermissaoGrupoUsuario]    Script Date: 15/04/2024 12:11:16 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -190,7 +225,7 @@ CREATE TABLE [dbo].[PermissaoGrupoUsuario](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Produto]    Script Date: 22/02/2024 09:14:06 ******/
+/****** Object:  Table [dbo].[Produto]    Script Date: 15/04/2024 12:11:16 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -212,7 +247,7 @@ CREATE TABLE [dbo].[Produto](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Senha]    Script Date: 22/02/2024 09:14:06 ******/
+/****** Object:  Table [dbo].[Senha]    Script Date: 15/04/2024 12:11:16 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -226,7 +261,7 @@ CREATE TABLE [dbo].[Senha](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Usuario]    Script Date: 22/02/2024 09:14:06 ******/
+/****** Object:  Table [dbo].[Usuario]    Script Date: 15/04/2024 12:11:16 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -246,7 +281,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[UsuarioGrupoUsuario]    Script Date: 22/02/2024 09:14:06 ******/
+/****** Object:  Table [dbo].[UsuarioGrupoUsuario]    Script Date: 15/04/2024 12:11:16 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -261,7 +296,7 @@ CREATE TABLE [dbo].[UsuarioGrupoUsuario](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Venda]    Script Date: 22/02/2024 09:14:06 ******/
+/****** Object:  Table [dbo].[Venda]    Script Date: 15/04/2024 12:11:16 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -281,10 +316,30 @@ CREATE TABLE [dbo].[Venda](
 GO
 ALTER TABLE [dbo].[Usuario] ADD  DEFAULT (getdate()) FOR [DataCadastro]
 GO
+ALTER TABLE [dbo].[Compra]  WITH CHECK ADD  CONSTRAINT [FK_Compra_FormaPagamento] FOREIGN KEY([FormaPagamentoId])
+REFERENCES [dbo].[FormaPagamento] ([Id])
+GO
+ALTER TABLE [dbo].[Compra] CHECK CONSTRAINT [FK_Compra_FormaPagamento]
+GO
+ALTER TABLE [dbo].[Compra]  WITH CHECK ADD  CONSTRAINT [FK_Compra_Fornecedor] FOREIGN KEY([FornecedorId])
+REFERENCES [dbo].[Fornecedor] ([Id])
+GO
+ALTER TABLE [dbo].[Compra] CHECK CONSTRAINT [FK_Compra_Fornecedor]
+GO
 ALTER TABLE [dbo].[Estoque]  WITH CHECK ADD  CONSTRAINT [FK_Estoque_Produto] FOREIGN KEY([IdProduto])
 REFERENCES [dbo].[Produto] ([Id])
 GO
 ALTER TABLE [dbo].[Estoque] CHECK CONSTRAINT [FK_Estoque_Produto]
+GO
+ALTER TABLE [dbo].[ItemCompra]  WITH CHECK ADD  CONSTRAINT [FK_ItemCompra_Compra] FOREIGN KEY([IdCompra])
+REFERENCES [dbo].[Compra] ([Id])
+GO
+ALTER TABLE [dbo].[ItemCompra] CHECK CONSTRAINT [FK_ItemCompra_Compra]
+GO
+ALTER TABLE [dbo].[ItemCompra]  WITH CHECK ADD  CONSTRAINT [FK_ItemCompra_Produto] FOREIGN KEY([IdProduto])
+REFERENCES [dbo].[Produto] ([Id])
+GO
+ALTER TABLE [dbo].[ItemCompra] CHECK CONSTRAINT [FK_ItemCompra_Produto]
 GO
 ALTER TABLE [dbo].[ItemVenda]  WITH CHECK ADD  CONSTRAINT [FK_ItemVenda_Produto1] FOREIGN KEY([IdProduto])
 REFERENCES [dbo].[Produto] ([Id])
@@ -330,10 +385,6 @@ ALTER TABLE [dbo].[Venda]  WITH CHECK ADD  CONSTRAINT [FK_Venda_Usuario] FOREIGN
 REFERENCES [dbo].[Usuario] ([Id])
 GO
 ALTER TABLE [dbo].[Venda] CHECK CONSTRAINT [FK_Venda_Usuario]
-GO
-USE [master]
-GO
-ALTER DATABASE [GestaoMercearia] SET  READ_WRITE 
 GO
 USE [master]
 GO
@@ -447,3 +498,4 @@ GO
 Insert Into FormaPagamento(Tipo, Descricao, Troco) VALUES ('Dinheiro', 'Uma forma de pagamento física, com cédulas e moedas', 1)
 Insert Into FormaPagamento(Tipo, Descricao, Troco) VALUES ('Cartão de Débito', 'Uma forma de pagamento que usa moeda virtual de conta bancária, de débito instantâneo', 0)
 Insert Into FormaPagamento(Tipo, Descricao, Troco) VALUES ('Pix', 'Uma forma de pagamento eletrônico que permite transferência monetária instantânea', 0)
+
